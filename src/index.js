@@ -4,6 +4,8 @@ import { Provider, connect } from 'react-redux';
 import { HashRouter as Router, Route } from 'react-router-dom';
 import store, { fetchColors } from './store';
 import Nav from './Nav';
+import Home from './Home';
+import Colors from './Colors';
 
 
 class _App extends Component{
@@ -14,6 +16,8 @@ class _App extends Component{
         return (
             <div>
                 <Route component={ Nav } />
+                <Route exact path='/' component={ Home } />
+                <Route path='/colors' component={ Colors } />
             </div>
         );
     }
